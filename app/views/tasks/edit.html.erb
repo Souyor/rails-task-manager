@@ -1,0 +1,22 @@
+
+<%= link_to "Back to tasks", tasks_path %>
+
+<br>
+<br>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <br>
+
+  <%= f.check_box :completed %> Completed
+
+  <br>
+
+  <%= f.submit class: "btn btn-primary"%>
+
+<% end %>
